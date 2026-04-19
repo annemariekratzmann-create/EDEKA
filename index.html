@@ -134,6 +134,10 @@ nav {
   white-space: nowrap;
   box-shadow: 0 4px 16px rgba(0,0,0,0.2);
 }
+/* Mobile hero photo (nur auf kleinen Bildschirmen sichtbar) */
+.hero-photo-mobile {
+  display: none;
+}
 /* ── Sections ── */
 section { padding: 88px 48px; }
 .inner { max-width: var(--max-w); margin: 0 auto; }
@@ -316,6 +320,15 @@ footer {
 @media (max-width: 960px) {
   .hero-inner { grid-template-columns: 1fr; }
   .hero-photo-wrap { display: none; }
+  .hero-photo-mobile {
+    display: block;
+    width: 180px; height: 220px;
+    object-fit: cover; object-position: center top;
+    border-radius: 16px;
+    border: 3px solid rgba(255,224,0,0.3);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+    margin: 0 0 24px;
+  }
   .about-grid, .why-inner, .personal-inner, .exp-grid { grid-template-columns: 1fr; }
   .skills-cols { grid-template-columns: 1fr 1fr; }
   nav { padding: 0 20px; }
@@ -342,7 +355,7 @@ footer {
     <li><a href="#why">Warum EDEKA?</a></li>
     <li><a href="#contact">Kontakt</a></li>
   </ul>
-  <a class="nav-cta" href="tel:+491631725262">Termin vereinbaren</a>
+  <a class="nav-cta" href="tel:+491631725262">📞 Termin vereinbaren</a>
 </nav>
 <!-- Hero -->
 <section class="hero">
@@ -352,6 +365,7 @@ footer {
       <h1>Annemarie<br><span>Kratzmann</span></h1>
       <p class="hero-role">Wirtschaftsingenieurin (B. Eng.) · Online-Marketing-Managerin</p>
       <p class="hero-location">Renchen, Baden-Württemberg</p>
+      <img class="hero-photo-mobile" src="Bild2.png" alt="Annemarie Kratzmann">
       <p class="hero-desc">Ich begleite Menschen durch Veränderung, strukturiert, verständlich und mit echter Überzeugung. Digitalisierung ist kein Selbstzweck, sondern ein Werkzeug, das Menschen stärkt.</p>
       <div class="hero-actions">
         <a class="btn-yellow" href="#about">Mehr über mich ↓</a>
